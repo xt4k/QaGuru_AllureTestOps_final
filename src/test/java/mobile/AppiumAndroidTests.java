@@ -1,6 +1,7 @@
 package mobile;
 
 import io.appium.java_client.MobileBy;
+import io.qameta.allure.TM4J;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -20,6 +21,7 @@ public class AppiumAndroidTests extends TestBaseMob {
     @Test
     @Tag("emu_android")
     @DisplayName("Successful search in for Appium Android Emulator `Wikipedia`.")
+    @TM4J("XT-Mobile_Appium_01")
     void searchTest() {
         back();
         step("Type search", () -> {

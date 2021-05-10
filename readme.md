@@ -11,3 +11,6 @@ Run web-shop api tests for "webshop.api.tests.tricentis": gradle clean shop_api_
 Run Api tests 'search result': gradle clean search_api_tests
 
 Run Api tests 'add Gift Cards to wishlist': gradle clean wish_api_tests
+
+Run Api tests 'all api tests': gradle clean api_tests
+

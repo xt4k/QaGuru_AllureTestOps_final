@@ -1,6 +1,7 @@
 package mobile;
 
 import io.appium.java_client.MobileBy;
+import io.qameta.allure.TM4J;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -17,6 +18,7 @@ public class ExtSelenideAndroidTests extends TestBaseMob {
     @Test
     @Tag("smoke")
     @DisplayName("Successful search in BS Sample App `Wikipedia android`.")
+    @TM4J("XT-Mobile_Android_01")
     void searchTest() {
         step("Type search", () -> {
             $(AccessibilityId("Search Wikipedia")).click();

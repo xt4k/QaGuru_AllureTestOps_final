@@ -3,6 +3,7 @@ package mobile;
 import com.codeborne.selenide.Configuration;
 import drivers.MobileDriver;
 import io.appium.java_client.MobileBy;
+import io.qameta.allure.TM4J;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -14,6 +15,7 @@ import static io.appium.java_client.MobileBy.AccessibilityId;
 public class SelenideAndroidTests {
 
     @Test
+    @TM4J("XT-Mobile_Web_00")
     void searchTest() {
         Configuration.browser = MobileDriver.class.getName();
         Configuration.startMaximized = false;

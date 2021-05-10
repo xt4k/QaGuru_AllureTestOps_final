@@ -3,6 +3,7 @@ package mobile;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
+import io.qameta.allure.TM4J;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -17,6 +18,7 @@ public class BrowserstackIosTests {
 
     @Tag("original_ios")
     @Test
+    @TM4J("XT-Mobile_Ios_00")
     void searchTest() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
 

@@ -6,7 +6,8 @@ import org.aeonbits.owner.Config;
 @Config.Sources({
         "classpath:mobile/${env}.properties",
         "system:properties",
-        "classpath:config/web.properties"
+        "classpath:config/web.properties",
+        "classpath:common.properties"
 })
 public interface WebConfig extends Config {
 

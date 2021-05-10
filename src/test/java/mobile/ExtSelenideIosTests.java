@@ -1,6 +1,7 @@
 package mobile;
 
 import io.appium.java_client.MobileBy;
+import io.qameta.allure.TM4J;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -16,6 +17,7 @@ public class ExtSelenideIosTests extends TestBaseMob {
     @Test
     @Tag("iphone")
     @DisplayName("Successful iOS auto test `hello@browserstack.com`.")
+    @TM4J("XT-Mobile_Ios_01")
     void searchTest() {
         step("Type search", () -> {
             $(MobileBy.AccessibilityId("Text Button")).click();
