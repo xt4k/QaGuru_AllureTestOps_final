@@ -1,22 +1,17 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import com.codeborne.selenide.logevents.SelenideLogger;
-import com.sun.glass.ui.View;
 import config.WebConfig;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
-import org.aeonbits.owner.Config;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 
 import static com.codeborne.selenide.Configuration.*;
-import static com.codeborne.selenide.Configuration.remote;
 import static io.qameta.allure.Allure.step;
 import static java.lang.System.setProperty;
 
