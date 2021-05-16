@@ -2,16 +2,21 @@ package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import com.sun.glass.ui.View;
 import config.WebConfig;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
+import org.aeonbits.owner.Config;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import static com.codeborne.selenide.Configuration.*;
+import static com.codeborne.selenide.Configuration.remote;
 import static io.qameta.allure.Allure.step;
 import static java.lang.System.setProperty;
 
@@ -56,6 +61,19 @@ public class MobileDriver implements WebDriverProvider {
             else
                 customDriver = new AndroidDriver(getUrl(capabilities), capabilities);
         }
+        else if (config.getDevice().equals("browser")){
+            browser = config.getBrowser( );
+            browserVersion = config.getBrowserVersion( );
+            startMaximized = true;
+            baseUrl = config.getBaseUrl( );
+          //  DesiredCapabilities capabilities = new DesiredCapabilities( );
+            capabilities.setCapability("enableVNC", config.isEnableVnc( ));
+            capabilities.setCapability("enableVideo", config.isEnableVideo( ));
+            browserCapabilities = capabilities;
+            remote = config.getServer( );
+         //   customDriver = new RemoteWebDriver();
+
+        }
         else {
             capabilities.setCapability("automationName", config.getAutoName());
             capabilities.setCapability("platformName", config.getPlatformName());
@@ -63,6 +81,7 @@ public class MobileDriver implements WebDriverProvider {
             capabilities.setCapability("version", config.getOsVer());
             capabilities.setCapability("appPackage", config.getAppPackage());
             capabilities.setCapability("appActivity", config.getAppActivity());
+
             // capabilities.setCapability("app", config.getAbsPath());
             customDriver = new AndroidDriver(getUrl(capabilities), capabilities);
         }
