@@ -18,7 +18,6 @@ public class GuiScenario extends TestBase {
 
     @Step("Success scenario for test `Search` button.")
     void successSearchScenario(String query) {
-
         open(baseUrl);
         new BasePageObject().search(query)
                 .checkSearchResult(query);
