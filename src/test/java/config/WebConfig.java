@@ -2,10 +2,10 @@ package config;
 
 import org.aeonbits.owner.Config;
 
-//@Config.LoadPolicy(Config.LoadType.MERGE)
+@Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
         "classpath:mobile/${env}.properties",
-        //"system:properties",   // "classpath:config/web.properties",
+        "system:properties",   // "classpath:config/web.properties",
         "classpath:{env}.properties"
 })
 public interface WebConfig extends Config {
@@ -33,8 +33,7 @@ public interface WebConfig extends Config {
     @Key("remote.driver")
     String getRemoteDriver();
 
-    @Key("server")
-        //    @DefaultValue("http://hub-cloud.browserstack.com/wd/hub")
+    @Key("server") //    @DefaultValue("http://hub-cloud.browserstack.com/wd/hub")
     String getServer();
 
     @Key("username")

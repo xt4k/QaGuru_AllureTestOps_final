@@ -1,6 +1,7 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
+import com.codeborne.selenide.logevents.SelenideLogger;
 import config.WebConfig;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
@@ -35,7 +36,7 @@ public class MobileDriver implements WebDriverProvider {
         capabilities.setCapability("locale", config.getLocale());
         capabilities.setCapability("language", config.getLanguage());
 
-        step("Server: "+config.getServer());
+        System.out.println("config" +config.toString());
 
         if (config.getServer().contains("browserstack")) {
             capabilities.setCapability("browserstack.user", config.getUser());
