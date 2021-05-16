@@ -35,6 +35,8 @@ public class MobileDriver implements WebDriverProvider {
         capabilities.setCapability("locale", config.getLocale());
         capabilities.setCapability("language", config.getLanguage());
 
+        step("Server: "+config.getServer());
+
         if (config.getServer().contains("browserstack")) {
             capabilities.setCapability("browserstack.user", config.getUser());
             capabilities.setCapability("browserstack.key", config.getKey());
