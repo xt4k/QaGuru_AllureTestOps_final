@@ -18,7 +18,7 @@ import static io.qameta.allure.Allure.step;
 public class ExtSelenideAndroidTests extends TestBaseMob {
 
     @Test
-    @Tag("smoke")
+    @Tag("bs_android")
     @DisplayName("Successful search in BS Sample App `Wikipedia android`.")
     @TM4J("XT-MAN-1")
     @JiraIssues({@JiraIssue("AUTO-201")})
