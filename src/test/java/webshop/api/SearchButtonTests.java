@@ -24,7 +24,7 @@ public class SearchButtonTests extends TestBase {
     @DisplayName("Test Api_01: Search returns 1 result match.")
     @Tag("api_testset")
     void searchSuccess1Result() {
-        query = getProperty("query");
+        query = getProperty("query1");
         answer = "Show details for Copy of Computing and Internet EX";
         apiTest.apiSearchScenario(query, answer);
     }

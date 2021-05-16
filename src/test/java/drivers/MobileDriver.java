@@ -57,6 +57,7 @@ public class MobileDriver implements WebDriverProvider {
                 customDriver = new AndroidDriver(getUrl(capabilities), capabilities);
         }
         else if (config.getDevice().equals("browser")){
+
             browser = config.getBrowser( );
             browserVersion = config.getBrowserVersion( );
             startMaximized = true;

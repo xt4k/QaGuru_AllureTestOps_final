@@ -28,8 +28,7 @@ public class TestBase {
     static void setUp() {
       //  baseURI = "http://demowebshop.tricentis.com";
      //   baseUrl=baseURI;
-
-/*        final WebConfig config = ConfigFactory.create(WebConfig.class, getProperties( ));
+       final WebConfig config = ConfigFactory.create(WebConfig.class, getProperties( ));
         browser = config.getBrowser( );
         browserVersion = config.getBrowserVersion( );
         startMaximized = true;
@@ -38,12 +37,14 @@ public class TestBase {
         capabilities.setCapability("enableVNC", config.isEnableVnc( ));
         capabilities.setCapability("enableVideo", config.isEnableVideo( ));
         browserCapabilities = capabilities;
-        remote = config.getServer( );*/
+        remote = config.getServer( );
 
         addListener("AllureSelenide", new AllureSelenide());
-        browser = MobileDriver.class.getName();
+     /*   browser = MobileDriver.class.getName();
         startMaximized = false;
-        browserSize = null;
+        browser = MobileDriver.class.;
+        *///browserSize = "1920x1080";
+
         timeout = 10000;
 
        // filters(new AllureRestAssured());

@@ -14,13 +14,11 @@ import static java.lang.System.getProperty;
 
 @Epic("Rest Assured")
 @Feature("Web-shop")
-@Story("Gui testet for button `Search`")
+@Story("Gui testset for button `Search`")
 @Owner("yuriy")
 @Tag("shop_gui")
 public class SearchButton extends TestBase {
-    QueryConverter qc = new QueryConverter();
     private String query;
-    private String answer;
     private GuiScenario apiTest = new GuiScenario();
 
     @TM4J("XT-UI-1")
@@ -29,6 +27,7 @@ public class SearchButton extends TestBase {
     @Tag("ui_testset")
     void searchSuccess1Result() {
         query = getProperty("query3");
+        apiTest = new GuiScenario();
         apiTest.successSearchScenario(query);
     }
 
@@ -38,6 +37,7 @@ public class SearchButton extends TestBase {
     @Tag("ui_testset")
     void searchNoResultTest() {
         query = getProperty("query2");
+        apiTest = new GuiScenario();
         String message = getProperty("no.search.result");
         apiTest.unSuccessSearchScenario(query, message);
     }
