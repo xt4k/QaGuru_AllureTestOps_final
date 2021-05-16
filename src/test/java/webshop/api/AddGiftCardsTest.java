@@ -18,11 +18,12 @@ import java.util.Random;
 @Tag("wish_api")
 public class AddGiftCardsTest extends TestBase {
 
-    private ApiScenario apiTest = new ApiScenario();
+    private final ApiScenario apiTest = new ApiScenario();
 
+    @JiraIssues({@JiraIssue("XT-API-7")})
     @TM4J("XT-API-7")
     @Test
-    @DisplayName("Test Api_01: Add Virtual gift card 5$.")
+    @DisplayName("Test Api_07: Add Virtual gift card 5$.")
     @Tag("api_testset")
     void senVirtualGiftCard5Success() {
         int cardNums = 1 + new Random().nextInt(11);
@@ -33,10 +34,11 @@ public class AddGiftCardsTest extends TestBase {
         apiTest.apiVirtualGiftCardScenarioPositive(form);
     }
 
+    @JiraIssues({@JiraIssue("XT-API-8")})
     @TM4J("XT-API-8")
     @Test
-    @DisplayName("Test Api_02: Add Physical gift card 50$.")
-    @Tags( {@Tag("api_testset"),@Tag("physical_card_api_test")})
+    @DisplayName("Test Api_08: Add Physical gift card 50$.")
+    @Tags({@Tag("api_testset"), @Tag("physical_card_api_test")})
     void senPhysicalGiftCard50Success() {
         int cardNums = 2 + new Random().nextInt(22);
         int index = 3;

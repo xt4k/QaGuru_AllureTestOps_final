@@ -3,6 +3,8 @@ package mobile;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
+import io.qameta.allure.JiraIssue;
+import io.qameta.allure.JiraIssues;
 import io.qameta.allure.TM4J;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -20,6 +22,7 @@ public class BrowserstackAndroidTests {
     @Tag("original_android")
     @Test
     @TM4J("XT-MAN-0")
+    @JiraIssues({@JiraIssue("XT-MAN-0")})
     void searchTest() throws MalformedURLException, InterruptedException {
 
         DesiredCapabilities caps = new DesiredCapabilities();

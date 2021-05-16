@@ -13,13 +13,15 @@ import static java.lang.System.getProperty;
 @Feature("Web-shop")
 @Story("Api testet for button `Search`")
 @Owner("yuriy")
-@Tags({@Tag("api"), @Tag("smoke"),@Tag("api_search")})
+@Tags({@Tag("api"), @Tag("smoke"), @Tag("api_search")})
+
 public class SearchButtonTests extends TestBase {
     private String query;
     private String answer;
-    private ApiScenario apiTest = new ApiScenario();
+    private final ApiScenario apiTest = new ApiScenario();
 
     @TM4J("XT-API-1")
+    @JiraIssues({@JiraIssue("XT-API-1")})
     @Test
     @DisplayName("Test Api_01: Search returns 1 result match.")
     @Tag("api_testset")
@@ -29,6 +31,7 @@ public class SearchButtonTests extends TestBase {
         apiTest.apiSearchScenario(query, answer);
     }
 
+    @JiraIssues({@JiraIssue("XT-API-2")})
     @TM4J("XT-API-2")
     @Test
     @DisplayName("Test Api_02: Search not found any result matched defined criteria.")

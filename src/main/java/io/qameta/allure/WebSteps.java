@@ -5,6 +5,7 @@ import org.apache.commons.io.IOUtils;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.fail;
@@ -80,7 +81,7 @@ public class WebSteps {
     public byte[] attachPageSource() {
         try {
             final InputStream stream = ClassLoader.getSystemResourceAsStream("index.html");
-            return IOUtils.toString(stream, Charset.forName("UTF-8")).getBytes();
+            return IOUtils.toString(stream, StandardCharsets.UTF_8).getBytes();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

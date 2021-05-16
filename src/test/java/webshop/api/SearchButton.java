@@ -12,16 +12,17 @@ import webshop.TestBase;
 @Feature("Web-shop")
 @Story("Button `Search`")
 @Owner("yuriy")
-@Tags( {@Tag("api_testset"),@Tag("shop_api")})
+@Tags({@Tag("api_testset"), @Tag("shop_api")})
 public class SearchButton extends TestBase {
     QueryConverter qc = new QueryConverter();
     private String query;
     private String answer;
-    private TestScenario apiTest = new TestScenario();
+    private final TestScenario apiTest = new TestScenario();
 
+    @JiraIssues({@JiraIssue("XT-API-3")})
     @TM4J("XT-API-3")
     @Test
-    @DisplayName("Test 01: Search returns 1 result match.")
+    @DisplayName("Test 03: Search returns 1 result match.")
     @Tag("search_api")
     void searchSuccess1Result() {
         query = qc.getQuery("query1");
@@ -29,9 +30,10 @@ public class SearchButton extends TestBase {
         apiTest.searchScenario(query, answer);
     }
 
+    @JiraIssues({@JiraIssue("XT-API-4")})
     @TM4J("XT-API-4")
     @Test
-    @DisplayName("Test 02: Search not found any result matched defined criteria.")
+    @DisplayName("Test 04: Search not found any result matched defined criteria.")
     @Tag("search_api")
     void searchNoResultTest() {
         query = qc.getQuery("query2");

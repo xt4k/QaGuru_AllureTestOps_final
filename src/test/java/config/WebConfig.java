@@ -10,25 +10,31 @@ import org.aeonbits.owner.Config;
 })
 public interface WebConfig extends Config {
 
-    @Key("enable.vnc")        //  @DefaultValue("false")
+    @Key("enable.vnc")
+        //  @DefaultValue("false")
     boolean isEnableVnc();
 
-    @Key("enable.video")        //  @DefaultValue("false")
+    @Key("enable.video")
+        //  @DefaultValue("false")
     boolean isEnableVideo();
 
-    @Key("browser")        //   @DefaultValue("chrome")
+    @Key("browser")
+        //   @DefaultValue("chrome")
     String getBrowser();
 
-    @Key("browser.version")// @DefaultValue("89")
-    String getBrowserVersion( );
+    @Key("browser.version")
+        // @DefaultValue("89")
+    String getBrowserVersion();
 
-    @Key("base.url")        //    @DefaultValue("https://demoqa.com/automation-practice-form")
+    @Key("base.url")
+        //    @DefaultValue("https://demoqa.com/automation-practice-form")
     String getBaseUrl();
 
     @Key("remote.driver")
     String getRemoteDriver();
 
-    @Key("server") //    @DefaultValue("http://hub-cloud.browserstack.com/wd/hub")
+    @Key("server")
+        //    @DefaultValue("http://hub-cloud.browserstack.com/wd/hub")
     String getServer();
 
     @Key("username")

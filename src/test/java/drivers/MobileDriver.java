@@ -36,7 +36,7 @@ public class MobileDriver implements WebDriverProvider {
         capabilities.setCapability("locale", config.getLocale());
         capabilities.setCapability("language", config.getLanguage());
 
-        System.out.println("config" +config.toString());
+        System.out.println("config" + config.toString());
 
         if (config.getServer().contains("browserstack")) {
             capabilities.setCapability("browserstack.user", config.getUser());
@@ -56,18 +56,18 @@ public class MobileDriver implements WebDriverProvider {
             else
                 customDriver = new AndroidDriver(getUrl(capabilities), capabilities);
         }
-        else if (config.getDevice().equals("browser")){
+        else if (config.getDevice().equals("browser")) {
 
-            browser = config.getBrowser( );
-            browserVersion = config.getBrowserVersion( );
+            browser = config.getBrowser();
+            browserVersion = config.getBrowserVersion();
             startMaximized = true;
-            baseUrl = config.getBaseUrl( );
-          //  DesiredCapabilities capabilities = new DesiredCapabilities( );
-            capabilities.setCapability("enableVNC", config.isEnableVnc( ));
-            capabilities.setCapability("enableVideo", config.isEnableVideo( ));
+            baseUrl = config.getBaseUrl();
+            //  DesiredCapabilities capabilities = new DesiredCapabilities( );
+            capabilities.setCapability("enableVNC", config.isEnableVnc());
+            capabilities.setCapability("enableVideo", config.isEnableVideo());
             browserCapabilities = capabilities;
-            remote = config.getServer( );
-         //   customDriver = new RemoteWebDriver();
+            remote = config.getServer();
+            //   customDriver = new RemoteWebDriver();
 
         }
         else {

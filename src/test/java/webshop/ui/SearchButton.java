@@ -1,6 +1,5 @@
 package webshop.ui;
 
-import helpers.QueryConverter;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
@@ -21,6 +20,7 @@ public class SearchButton extends TestBase {
     private String query;
     private GuiScenario apiTest = new GuiScenario();
 
+    @JiraIssues({@JiraIssue("XT-UI-1")})
     @TM4J("XT-UI-1")
     @Test
     @DisplayName("Test Ui_01: Search returns 1 result match.")
@@ -31,6 +31,7 @@ public class SearchButton extends TestBase {
         apiTest.successSearchScenario(query);
     }
 
+    @JiraIssues({@JiraIssue("XT-UI-2")})
     @TM4J("XT-UI-2")
     @Test
     @DisplayName("Test Ui_02: Search not found any result.")

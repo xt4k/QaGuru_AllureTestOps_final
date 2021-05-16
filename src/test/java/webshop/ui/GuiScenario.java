@@ -7,7 +7,6 @@ import webshop.TestBase;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.open;
-import static io.restassured.RestAssured.baseURI;
 
 @Epic("Browser UI auto-tests")
 @Feature("Web-shop")

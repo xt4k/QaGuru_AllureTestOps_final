@@ -3,9 +3,11 @@ package webshop.api;
 import helpers.Auth;
 import io.qameta.allure.*;
 import io.restassured.response.Response;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import webshop.TestBase;
+
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
@@ -18,9 +20,11 @@ import static org.hamcrest.Matchers.is;
 @Tag("qa_guru_api")
 public class CartTests extends TestBase {
 
+    @JiraIssues({@JiraIssue("XT-API-5")})
     @TM4J("XT-API-5")
     @Test
     @Tag("api_testset")
+    @DisplayName("Test Api-05")
     void addItemToCartWithHardCodeTest() {
         Response response =
                 given()
@@ -38,9 +42,11 @@ public class CartTests extends TestBase {
         System.out.println(response);
     }
 
+    @JiraIssues({@JiraIssue("XT-API-6")})
     @TM4J("XT-API-6")
     @Test
     @Tag("api_testset")
+    @DisplayName("Test Api 06")
     void addItemToCartWithCookieTest() {
         Map<String, String> cookies = new Auth().login("e@ma.il", "123456789");
 
