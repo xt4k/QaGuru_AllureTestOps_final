@@ -19,7 +19,7 @@ public class BrowserstackAndroidTests {
 
     @Tag("original_android")
     @Test
-    @TM4J("XT-Mobile_Android_00")
+    @TM4J("XT-MAN-0")
     void searchTest() throws MalformedURLException, InterruptedException {
 
         DesiredCapabilities caps = new DesiredCapabilities();

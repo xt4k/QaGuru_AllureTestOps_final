@@ -23,7 +23,7 @@ public class SearchButton extends TestBase {
     private String answer;
     private GuiScenario apiTest = new GuiScenario();
 
-    @TM4J("XT-Ui_01")
+    @TM4J("XT-UI-1")
     @Test
     @DisplayName("Test Ui_01: Search returns 1 result match.")
     @Tag("ui_testset")
@@ -32,7 +32,7 @@ public class SearchButton extends TestBase {
         apiTest.successSearchScenario(query);
     }
 
-    @TM4J("XT-Ui_02")
+    @TM4J("XT-UI-2")
     @Test
     @DisplayName("Test Ui_02: Search not found any result.")
     @Tag("ui_testset")

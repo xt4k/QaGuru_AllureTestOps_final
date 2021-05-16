@@ -15,7 +15,7 @@ import static io.appium.java_client.MobileBy.AccessibilityId;
 public class SelenideAndroidTests {
 
     @Test
-    @TM4J("XT-Mobile_Web_00")
+    @TM4J("XT-MW-0")
     void searchTest() {
         Configuration.browser = MobileDriver.class.getName();
         Configuration.startMaximized = false;

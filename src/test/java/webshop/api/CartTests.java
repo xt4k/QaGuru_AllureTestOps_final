@@ -18,7 +18,7 @@ import static org.hamcrest.Matchers.is;
 @Tag("qa_guru_api")
 public class CartTests extends TestBase {
 
-    @TM4J("XT-Api_05")
+    @TM4J("XT-API-5")
     @Test
     @Tag("api_testset")
     void addItemToCartWithHardCodeTest() {
@@ -38,7 +38,7 @@ public class CartTests extends TestBase {
         System.out.println(response);
     }
 
-    @TM4J("XT-Api_06")
+    @TM4J("XT-API-6")
     @Test
     @Tag("api_testset")
     void addItemToCartWithCookieTest() {

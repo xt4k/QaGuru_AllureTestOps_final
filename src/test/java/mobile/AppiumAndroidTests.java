@@ -21,7 +21,7 @@ public class AppiumAndroidTests extends TestBaseMob {
     @Test
     @Tag("emu_android")
     @DisplayName("Successful search in for Appium Android Emulator `Wikipedia`.")
-    @TM4J("XT-Mobile_Appium_01")
+    @TM4J("XT-MAP-1")
     void searchTest() {
         back();
         step("Type search", () -> {

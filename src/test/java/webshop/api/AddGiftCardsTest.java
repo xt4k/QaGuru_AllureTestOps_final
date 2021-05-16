@@ -20,7 +20,7 @@ public class AddGiftCardsTest extends TestBase {
 
     private ApiScenario apiTest = new ApiScenario();
 
-    @TM4J("XT-Api_07")
+    @TM4J("XT-API-7")
     @Test
     @DisplayName("Test Api_01: Add Virtual gift card 5$.")
     @Tag("api_testset")
@@ -33,7 +33,7 @@ public class AddGiftCardsTest extends TestBase {
         apiTest.apiVirtualGiftCardScenarioPositive(form);
     }
 
-    @TM4J("XT-Api_08")
+    @TM4J("XT-API-8")
     @Test
     @DisplayName("Test Api_02: Add Physical gift card 50$.")
     @Tags( {@Tag("api_testset"),@Tag("physical_card_api_test")})

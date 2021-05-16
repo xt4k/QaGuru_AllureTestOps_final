@@ -170,3 +170,9 @@ task ph_card_api_test(type: Test) {
         includeTags 'physical_card_api_test'
     }
 }
+
+task ui_search_test(type: Test) {
+    useJUnitPlatform {
+        includeTags 'ui_testset'
+    }
+}

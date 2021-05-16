@@ -15,3 +15,6 @@ Run Api tests 'add Gift Cards to wishlist': gradle clean wish_api_tests
 Run Api tests 'all api tests': gradle clean api_tests
 
 Run Api test 'physical gift card api test': gradle clean -Denv=common ph_card_api_test
+
+Run GUI test 'search button': gradle clean shop_ui_tests -Denv=common
+

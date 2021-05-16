@@ -18,7 +18,7 @@ public class ExtSelenideAndroidTests extends TestBaseMob {
     @Test
     @Tag("smoke")
     @DisplayName("Successful search in BS Sample App `Wikipedia android`.")
-    @TM4J("XT-Mobile_Android_01")
+    @TM4J("XT-MAN-1")
     void searchTest() {
         step("Type search", () -> {
             $(AccessibilityId("Search Wikipedia")).click();

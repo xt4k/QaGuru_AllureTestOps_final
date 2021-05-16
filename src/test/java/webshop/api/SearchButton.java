@@ -19,7 +19,7 @@ public class SearchButton extends TestBase {
     private String answer;
     private TestScenario apiTest = new TestScenario();
 
-    @TM4J("XT-Api_03")
+    @TM4J("XT-API-3")
     @Test
     @DisplayName("Test 01: Search returns 1 result match.")
     @Tag("search_api")
@@ -29,7 +29,7 @@ public class SearchButton extends TestBase {
         apiTest.searchScenario(query, answer);
     }
 
-    @TM4J("XT-Api_04")
+    @TM4J("XT-API-4")
     @Test
     @DisplayName("Test 02: Search not found any result matched defined criteria.")
     @Tag("search_api")

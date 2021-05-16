@@ -17,7 +17,7 @@ public class ExtSelenideIosTests extends TestBaseMob {
     @Test
     @Tag("iphone")
     @DisplayName("Successful iOS auto test `hello@browserstack.com`.")
-    @TM4J("XT-Mobile_Ios_01")
+    @TM4J("XT-MI-1")
     void searchTest() {
         step("Type search", () -> {
             $(MobileBy.AccessibilityId("Text Button")).click();

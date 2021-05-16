@@ -18,7 +18,7 @@ public class BrowserstackIosTests {
 
     @Tag("original_ios")
     @Test
-    @TM4J("XT-Mobile_Ios_00")
+    @TM4J("XT-MI-0")
     void searchTest() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
 
