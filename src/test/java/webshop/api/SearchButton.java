@@ -4,6 +4,7 @@ import helpers.QueryConverter;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import webshop.TestBase;
 
@@ -11,7 +12,7 @@ import webshop.TestBase;
 @Feature("Web-shop")
 @Story("Button `Search`")
 @Owner("yuriy")
-@Tag("shop_api")
+@Tags( {@Tag("api_testset"),@Tag("shop_api")})
 public class SearchButton extends TestBase {
     QueryConverter qc = new QueryConverter();
     private String query;
@@ -21,7 +22,7 @@ public class SearchButton extends TestBase {
     @TM4J("XT-Api_03")
     @Test
     @DisplayName("Test 01: Search returns 1 result match.")
-    @Tag("api_testset")
+    @Tag("search_api")
     void searchSuccess1Result() {
         query = qc.getQuery("query");
         answer = "Show details for Copy of Computing and Internet EX";
@@ -31,7 +32,7 @@ public class SearchButton extends TestBase {
     @TM4J("XT-Api_04")
     @Test
     @DisplayName("Test 02: Search not found any result matched defined criteria.")
-    @Tag("api_testset")
+    @Tag("search_api")
     void searchNoResultTest() {
         query = qc.getQuery("query2");
         answer = "No products were found that matched your criteria.";

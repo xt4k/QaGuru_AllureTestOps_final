@@ -3,6 +3,7 @@ package webshop.api;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import pojo.Form;
 import webshop.TestBase;
@@ -35,7 +36,7 @@ public class AddGiftCardsTest extends TestBase {
     @TM4J("XT-Api_08")
     @Test
     @DisplayName("Test Api_02: Add Physical gift card 50$.")
-    @Tag("api_testset")
+    @Tags( {@Tag("api_testset"),@Tag("physical_card_api_test")})
     void senPhysicalGiftCard50Success() {
         int cardNums = 2 + new Random().nextInt(22);
         int index = 3;
