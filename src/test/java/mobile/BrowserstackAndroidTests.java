@@ -20,7 +20,7 @@ import java.util.List;
 @Tag("android")
 public class BrowserstackAndroidTests {
 
-    @Tag("bs_ios")
+    @Tag("bs_android")
     @Test
     @TM4J("XT-MAN-0")
     @JiraIssues({@JiraIssue("AUTO-201")})

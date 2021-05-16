@@ -6,6 +6,7 @@ import io.appium.java_client.ios.IOSElement;
 import io.qameta.allure.JiraIssue;
 import io.qameta.allure.JiraIssues;
 import io.qameta.allure.TM4J;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -18,10 +19,11 @@ import java.net.URL;
 @Tag("ios")
 public class BrowserstackIosTests {
 
-    @Tag("original_ios")
+    @Tag("bs_ios")
     @Test
     @TM4J("XT-MI-0")
     @JiraIssues({@JiraIssue("AUTO-201")})
+    @DisplayName("QA guru original Ios test from BS.")
     void searchTest() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
 

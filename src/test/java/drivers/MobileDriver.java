@@ -56,7 +56,7 @@ public class MobileDriver implements WebDriverProvider {
             else
                 customDriver = new AndroidDriver(getUrl(capabilities), capabilities);
         }
-        else if (config.getDevice().equals("browser")) {
+        else if ("browser".equals(config.getDevice())) {
 
             browser = config.getBrowser();
             browserVersion = config.getBrowserVersion();
