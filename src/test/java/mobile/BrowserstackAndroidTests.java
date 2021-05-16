@@ -22,7 +22,7 @@ public class BrowserstackAndroidTests {
     @Tag("original_android")
     @Test
     @TM4J("XT-MAN-0")
-    @JiraIssues({@JiraIssue("XT-MAN-0")})
+    @JiraIssues({@JiraIssue("AUTO-201")})
     void searchTest() throws MalformedURLException, InterruptedException {
 
         DesiredCapabilities caps = new DesiredCapabilities();

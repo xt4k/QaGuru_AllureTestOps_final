@@ -18,7 +18,7 @@ public class SelenideAndroidTests {
 
     @Test
     @TM4J("XT-MW-0")
-    @JiraIssues({@JiraIssue("XT-MW-0")})
+    @JiraIssues({@JiraIssue("AUTO-201")})
     void searchTest() {
         Configuration.browser = MobileDriver.class.getName();
         Configuration.startMaximized = false;

@@ -21,7 +21,7 @@ public class BrowserstackIosTests {
     @Tag("original_ios")
     @Test
     @TM4J("XT-MI-0")
-    @JiraIssues({@JiraIssue("XT-MI-0")})
+    @JiraIssues({@JiraIssue("AUTO-201")})
     void searchTest() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
 

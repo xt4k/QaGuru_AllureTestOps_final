@@ -20,7 +20,7 @@ import static org.hamcrest.Matchers.is;
 @Tag("qa_guru_api")
 public class CartTests extends TestBase {
 
-    @JiraIssues({@JiraIssue("XT-API-5")})
+    @JiraIssues({@JiraIssue("AUTO-199")})
     @TM4J("XT-API-5")
     @Test
     @Tag("api_testset")
@@ -42,7 +42,7 @@ public class CartTests extends TestBase {
         System.out.println(response);
     }
 
-    @JiraIssues({@JiraIssue("XT-API-6")})
+    @JiraIssues({@JiraIssue("AUTO-199")})
     @TM4J("XT-API-6")
     @Test
     @Tag("api_testset")

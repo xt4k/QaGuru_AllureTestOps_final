@@ -19,7 +19,7 @@ public class SearchButton extends TestBase {
     private String answer;
     private final TestScenario apiTest = new TestScenario();
 
-    @JiraIssues({@JiraIssue("XT-API-3")})
+    @JiraIssues({@JiraIssue("AUTO-199")})
     @TM4J("XT-API-3")
     @Test
     @DisplayName("Test 03: Search returns 1 result match.")
@@ -30,7 +30,7 @@ public class SearchButton extends TestBase {
         apiTest.searchScenario(query, answer);
     }
 
-    @JiraIssues({@JiraIssue("XT-API-4")})
+    @JiraIssues({@JiraIssue("AUTO-199")})
     @TM4J("XT-API-4")
     @Test
     @DisplayName("Test 04: Search not found any result matched defined criteria.")

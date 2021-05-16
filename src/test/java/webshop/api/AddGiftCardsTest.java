@@ -20,7 +20,7 @@ public class AddGiftCardsTest extends TestBase {
 
     private final ApiScenario apiTest = new ApiScenario();
 
-    @JiraIssues({@JiraIssue("XT-API-7")})
+    @JiraIssues({@JiraIssue("AUTO-199")})
     @TM4J("XT-API-7")
     @Test
     @DisplayName("Test Api_07: Add Virtual gift card 5$.")
@@ -34,7 +34,7 @@ public class AddGiftCardsTest extends TestBase {
         apiTest.apiVirtualGiftCardScenarioPositive(form);
     }
 
-    @JiraIssues({@JiraIssue("XT-API-8")})
+    @JiraIssues({@JiraIssue("AUTO-199")})
     @TM4J("XT-API-8")
     @Test
     @DisplayName("Test Api_08: Add Physical gift card 50$.")
